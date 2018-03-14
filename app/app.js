@@ -14,6 +14,6 @@ var myApp = angular
         .state('detail',{
         url:'/detail',
         templateUrl: 'app/templates/detail.html',
-         controller:'detailCtrl'
+        controller:'detailCtrl'
     });
 });

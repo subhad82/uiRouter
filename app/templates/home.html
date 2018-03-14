@@ -1,3 +1,67 @@
-<h1>home page</h1>
-<p>{{chutiya}}</p>
- <a ui-sref="detail">detail</a>
+<header> <h4 class="text-center">Employees</h4></header> 
+
+<div ng-controller="HomeCtrl">
+
+
+      <table class="table table-bordered">
+    <thead>
+      <tr>
+          
+          <th  class="text-center align-middle">Serial</th>
+        <th class="text-center align-middle">
+          <a href="#" class="btn btn-primary sorting-btn" ng-click="orderByField='firstName'; reverseSort = !reverseSort">
+          First Name 
+          </a>
+        </th>
+        <th class="text-center align-middle">
+          <a href="#" class="btn btn-primary sorting-btn" ng-click="orderByField='lastName'; reverseSort = !reverseSort">
+            Last Name 
+          </a>
+        </th>
+        <th class="text-center align-middle">
+          <a href="#" class="btn btn-primary sorting-btn" ng-click="orderByField='email'; reverseSort = !reverseSort">
+          Email 
+          </a>
+        </th>  
+          <th class="text-center align-middle">
+          <a href="#"  class="btn btn-primary sorting-btn" ng-click="orderByField='gender'; reverseSort = !reverseSort">
+          Gender 
+          </a>
+        </th>  
+          <th class="text-center align-middle">
+          <a href="#" class="btn btn-primary sorting-btn" ng-click="orderByField='skill'; reverseSort = !reverseSort">
+          Skill 
+          </a>
+        </th>  
+          <th class="text-center align-middle">
+          <a href="#" class="btn btn-primary sorting-btn" ng-click="orderByField='university'; reverseSort = !reverseSort">
+          University 
+          </a>
+        </th>    
+          <th class="text-center align-middle">
+          <a href="#" class="btn btn-primary sorting-btn" ng-click="orderByField='companyName'; reverseSort = !reverseSort">
+          CompanyName 
+          </a>
+        </th>
+          <th class="text-center align-middle">
+          <a href="#" class="btn btn-primary sorting-btn" ng-click="orderByField='jobTitle'; reverseSort = !reverseSort">
+          JobTitle 
+          </a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="emp in employees|orderBy:orderByField:reverseSort">
+         <td  class="text-center align-middle">{{$index +1}}</td>
+        <td  class="text-center align-middle">{{emp.firstName}}</td>
+        <td  class="text-center align-middle">{{emp.lastName}}</td>
+        <td  class="text-center align-middle">{{emp.email}}</td>
+        <td  class="text-center align-middle">{{emp.gender}}</td>
+        <td  class="text-center align-middle">{{emp.skill}}</td>
+        <td  class="text-center align-middle">{{emp.university}}</td>
+        <td  class="text-center align-middle">{{emp.companyName}}</td>
+        <td  class="text-center align-middle">{{emp.jobTitle}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

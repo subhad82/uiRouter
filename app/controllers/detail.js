@@ -1,5 +1,3 @@
-myApp.controller('detailCtrl',['$scope',function($scope){
+myApp.controller('DetailCtrl',['$scope','$routeParams',function($scope, $routeParams){
    
-   console.log('yes india');
-    
 }]);
